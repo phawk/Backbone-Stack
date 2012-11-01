@@ -1,21 +1,34 @@
-(function() {
-
-  require.config({
+require.config({
+    baseUrl: "javascripts",
     paths: {
-      jquery: 'libs/jquery/jquery-min',
-      underscore: 'libs/underscore/underscore-min',
-      backbone: 'libs/backbone/backbone-optamd3-min',
-      handlebars: 'libs/handlebars/handlebars',
-      text: 'libs/require/text',
-      templates: 'templates',
-      global: 'libs/global/globals'
+        "zepto": "libs/zepto/zepto.min",
+        "underscore": "libs/underscore/underscore-min",
+        "backbone": "libs/backbone/backbone-min",
+        "handlebars": "libs/handlebars/handlebars",
+        "moment": "libs/moment/moment.min",
+        "text": "libs/require/text"
     },
-    baseUrl: 'javascripts',
-    urlArgs: "bust= " + ((new Date()).getTime())
-  });
+    shim: {
+        'zepto': {
+            exports: '$'
+        },
+        'underscore': {
+            exports: '_'
+        },
+        'backbone': {
+            deps: ['underscore', 'zepto'],
+            exports: 'Backbone'
+        },
+        'handlebars': {
+            exports: 'Handlebars'
+        }
+    },
+    urlArgs: "bust=" + (new Date()).getTime() // cache-busting for development
+});
 
-  require(['app'], function(App) {
-    return App.initialize();
-  });
+require(['app'], function(App) {
 
-}).call(this);
+    // Startup the app view
+    var app = new App();
+
+});

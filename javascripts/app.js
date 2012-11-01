@@ -1,11 +1,14 @@
-(function() {
+define(
+['zepto', 'underscore', 'backbone', 'router'],
+function($, _, Backbone, Router) {
 
-  define(['jquery', 'underscore', 'backbone', 'router'], function($, _, Backbone, Router) {
-    return {
-      initialize: function() {
-        return Router.initialize();
-      }
-    };
-  });
+    return Backbone.View.extend({
 
-}).call(this);
+        initialize: function() {
+            // Boot up the router
+            Router.initialize();
+        }
+
+    });
+
+});
