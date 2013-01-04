@@ -1,8 +1,8 @@
 define(
-["libs/chai/chai", "libs/chai/sinon-chai", "helpers/sandbox"],
-function(chai, sinonChai, Sandbox) {
+["chai", "src/helpers/sandbox"],
+function(chai, Sandbox) {
 
-    var should = chai.should();
+    var expect = chai.expect;
 
     suite("Sandbox", function() {
 
@@ -15,7 +15,7 @@ function(chai, sinonChai, Sandbox) {
         });
 
         test("Sandbox should exist", function() {
-            this.sandbox.should.be.ok;
+            expect(this.sandbox).to.be.ok;
         });
 
         test("should be capable of Pub Sub", function() {
@@ -27,7 +27,7 @@ function(chai, sinonChai, Sandbox) {
             this.sandbox.trigger("some-event-name");
 
             // Assert
-            sandboxSpy.should.have.been.calledOnce;
+            expect(sandboxSpy.called).to.be.true;
 
             // Cleanup
             this.sandbox.off("some-event-name", sandboxSpy);

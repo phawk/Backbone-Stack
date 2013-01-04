@@ -1,0 +1,9 @@
+{
+  "name": "application-name",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "grunt-contrib-requirejs": "latest",
+    "grunt-contrib-watch": "~0.1.4"
+  }
+}
