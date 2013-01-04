@@ -42,6 +42,9 @@ module.exports = function(grunt) {
             compile: {
                 options: {
                     name: "main"
+                  , generateSourceMaps: true // Experimental
+                  , preserveLicenseComments: false // Needs turned off for generateSourceMaps
+                  , optimize: "uglify2" // Supports generateSourceMaps
                   , baseUrl: "src"
                   , out: "public/javascripts/build.js"
                   , paths: {
