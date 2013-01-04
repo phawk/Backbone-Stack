@@ -1,5 +1,5 @@
 define(
-['zepto', 'underscore', 'backbone'],
+['jquery', 'underscore', 'backbone'],
 function($, _, Backbone) {
 
     return _.extend({

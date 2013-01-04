@@ -1,5 +1,5 @@
 define(
-['zepto', 'underscore', 'backbone', 'views/home/main'], 
+['jquery', 'underscore', 'backbone', 'views/home/main'], 
 function($, _, Backbone, mainHomeView) {
 
     var AppRouter = Backbone.Router.extend({

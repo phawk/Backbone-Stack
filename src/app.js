@@ -1,5 +1,5 @@
 define(
-['zepto', 'underscore', 'backbone', 'router'],
+['jquery', 'underscore', 'backbone', 'router'],
 function($, _, Backbone, Router) {
 
     return Backbone.View.extend({
