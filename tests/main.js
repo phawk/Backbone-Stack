@@ -29,6 +29,5 @@ require.config({
 
 require(["helpers/sandbox.test"], function() {
     // Start the test runner
-    if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
-    else { mocha.run(); }
+    mocha.run();
 });

@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "test": "./node_modules/mocha-phantomjs/bin/mocha-phantomjs -R dot tests.html"
+    "test": "grunt test"
   },
   "devDependencies": {
+    "grunt": "*",
     "grunt-contrib-requirejs": "latest",
     "grunt-contrib-watch": "~0.1.4",
-    "mocha-phantomjs": "*"
+    "grunt-mocha": "~0.1.7"
   }
 }

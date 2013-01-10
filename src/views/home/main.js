@@ -1,5 +1,5 @@
 define(
-['jquery', 'underscore', 'backbone', 'hbs!templates/home/main'], 
+['jquery', 'underscore', 'backbone', 'hbs!templates/home/main'],
 function($, _, Backbone, mainHomeTemplate) {
 
     return Backbone.View.extend({

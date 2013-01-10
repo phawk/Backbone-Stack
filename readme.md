@@ -2,7 +2,12 @@
 
 This is my Backbone Stack for starting new projects, it alleviates a lot of the common boilerplate code and setup. It uses AMD modules, mocha for TDD and handlebars precompiled templates.
 
-### Recent changes (4th January 2013)
+### Latest changes (10th Jan 2013)
+
+* Added headless unit testing with command line output with [phantomjs](http://phantomjs.org/) and [mocha-phantomjs](https://github.com/metaskills/mocha-phantomjs).
+* Added `.travis.yml` file for travis-ci testing support
+
+### Recent changes (4th Jan 2013)
 
 * Added grunt to build and watch the JS
 * Stopped using require JS without the build step, even for development.
