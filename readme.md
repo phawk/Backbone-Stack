@@ -79,6 +79,19 @@ $ grunt watch
 $ grunt build
 ```
 
+## git pre-commit hook
+
+Simply run these commands inside your project dir to set a commit hook that will run before each commit. If any of the test or build phase fails the commit will not be accepted.
+
+```sh
+# Create a pre-commit hook
+$ touch .git/hooks/pre-commit
+# Make executable
+$ chmod +x .git/hooks/pre-commit
+# Build on commit
+$ echo "grunt build" > .git/hooks/pre-commit
+```
+
 * * *
 
 # License
