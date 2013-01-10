@@ -54,7 +54,7 @@ module.exports = function(grunt) {
             }
         },
         mocha: {
-            index: ['tests.html']
+            index: ['tests/test-runner.html']
         },
         requirejs: {
             compile: {
