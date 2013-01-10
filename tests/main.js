@@ -29,6 +29,6 @@ require.config({
 
 require(["helpers/sandbox.test"], function() {
     // Start the test runner
-    var runner = mocha.run();
-    runner.globals(['XMLHttpRequest']);
+    if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
+    else { mocha.run(); }
 });
