@@ -57,7 +57,7 @@ The unit tests can be opened up in the browser with the `tests/test-runner.html`
 
 The idea behind linting first, then testing and then building is to fail as quickly and early as possible, this will really help to boost productivity.
 
-```js
+```sh
 # Watch src/ and tests/ files and lint, test, then build on change (handy for TDD)
 $ grunt watch
 
