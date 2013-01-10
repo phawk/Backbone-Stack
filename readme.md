@@ -2,6 +2,8 @@
 
 This is my Backbone Stack for starting new projects, it alleviates a lot of the common boilerplate code and setup. It uses AMD modules, mocha for TDD and handlebars precompiled templates.
 
+[![Build Status](https://travis-ci.org/phawk/Backbone-Stack.png)](https://travis-ci.org/phawk/Backbone-Stack)
+
 ### Latest changes (10th Jan 2013)
 
 * Added headless unit testing with command line output with [phantomjs](http://phantomjs.org/) and [grunt-mocha](https://github.com/kmiyashiro/grunt-mocha).
