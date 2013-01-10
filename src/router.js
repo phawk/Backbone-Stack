@@ -1,6 +1,6 @@
 define(
-['jquery', 'underscore', 'backbone', 'views/home/main'], 
-function($, _, Backbone, mainHomeView) {
+['jquery', 'underscore', 'backbone', 'views/home/main'],
+function($, _, Backbone, MainHomeView) {
 
     var AppRouter = Backbone.Router.extend({
 
@@ -11,12 +11,12 @@ function($, _, Backbone, mainHomeView) {
 
         homepage: function() {
             // Homepage
-            new mainHomeView({
+            new MainHomeView({
                 el: $(".main-app")
             }).render();
         },
 
-        defaultAction: function(actions) {
+        defaultAction: function() {
             // 404 route
         }
 
