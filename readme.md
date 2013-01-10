@@ -4,16 +4,13 @@ This is my Backbone Stack for starting new projects, it alleviates a lot of the 
 
 ### Latest changes (10th Jan 2013)
 
-* Added headless unit testing with command line output with [phantomjs](http://phantomjs.org/) and [mocha-phantomjs](https://github.com/metaskills/mocha-phantomjs).
+* Added headless unit testing with command line output with [phantomjs](http://phantomjs.org/) and [grunt-mocha](https://github.com/kmiyashiro/grunt-mocha).
 * Added `.travis.yml` file for travis-ci testing support
+* Added new grunt tasks for **test** and **build**
+* Easy to setup git pre-commit hook to test and build.
+* Inserted my JSHint settings to Gruntfile, all with comments so you can easily tweak, or view the [JSHint docs](http://www.jshint.com/docs/) for more.
 
-### Recent changes (4th Jan 2013)
-
-* Added grunt to build and watch the JS
-* Stopped using require JS without the build step, even for development.
-* Now using the excellent [HBS require](https://github.com/SlexAxton/require-handlebars-plugin) plugin to always precompile the handlebars templates.
-* Updated to latest version of all the plugins: jQuery 1.8.3, Backbone 0.9.9, underscore 1.4.3 etc.
-* Now using chai's `expect()` style assertions, from doing a lot of testing expect seems to work better and given better output as it can never be chained in with undefined variables like `should()`.
+[View the changelog](https://github.com/phawk/Backbone-Stack/blob/master/changelog.md)
 
 ### Included libraries
 
@@ -24,7 +21,7 @@ This is my Backbone Stack for starting new projects, it alleviates a lot of the 
 * [Handlebars JS](http://handlebarsjs.com/) - for templating
 * [Twitter Bootstrap](http://twitter.github.com/bootstrap/) - For a quick and dirty UI prototype
 
-### Libraries for TDD
+### Libraries for Test Driven Development
 
 * [Mocha](http://visionmedia.github.com/mocha/) - TDD / BDD testing framework for JavaScript
 * [Chai.js](http://chaijs.com/) - Nice assertions
@@ -32,41 +29,55 @@ This is my Backbone Stack for starting new projects, it alleviates a lot of the 
 
 * * *
 
+# Setup
+
+## Installing dependencies
+
+**Note** you will need [node.js and npm](http://nodejs.org) and [phantomJS](http://phantomjs.org) for headless unit tests.
+
+```sh
+# Install grunt build tool
+$ npm install -g grunt
+
+# Install required node modules for grunt
+$ npm install
+```
+
+* * *
+
 # Getting started
 
 ## Running your app
 
-Open up the `public/index.html` file in your browser.
+Open up the `public/index.html` file in your browser to view your app, it will be using pre-compiled templates and build and minified JS.
 
-## Running your tests
+## Testing your code
 
-Open up the `tests.html` file in your browser.
+The unit tests can be opened up in the browser with the `tests/test-runner.html` file, or can be done through grunt on the command line.
 
-## Installing dependencies
+The idea behind linting first, then testing and then building is to fail as quickly and early as possible, this will really help to boost productivity.
 
-**Note** you will need [node.js and npm](http://nodejs.org).
+```js
+# Watch src/ and tests/ files and lint, test, then build on change (handy for TDD)
+$ grunt watch
 
-```sh
-# Install grunt cli
-$ npm install -g grunt
-
-# Install require node modules for grunt
-$ npm install
+# Lint and test files
+$ grunt test
 ```
 
-## Build process
+**Note** the test suite loads requireJS dynamically and you don't need to build to run the tests, this lets you do TDD with less effort.
+
+## Building your code
 
 All of the JavaScript is pre-build using [grunt](http://gruntjs.com/) and the r.js optimiser, this means your development environment better simulates what will be served in production.
 
 ```sh
-# Watch src/ files and build on change
+# Watch src/ and tests/ files and test, then build on change
 $ grunt watch
 
-# Do a one off build
-$ grunt requirejs
+# Do a one off build - will lint and test your code first
+$ grunt build
 ```
-
-**Note** the test suite loads requireJS dynamically and you don't need to build to run the tests, this lets you do TDD with less effort.
 
 * * *
 

@@ -39,7 +39,6 @@ module.exports = function(grunt) {
                 expr: true, // Allowed for chais expect(false).to.be.false; assertion style.
                 devel: true, // Allows console.log's etc
                 trailing: true // Prohibits trailing whitespace
-                
             },
             globals: {
                 require: true,
