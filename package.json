@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt build"
   },
   "devDependencies": {
     "grunt": "*",
