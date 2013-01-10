@@ -2,8 +2,12 @@
   "name": "application-name",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "test": "./node_modules/mocha-phantomjs/bin/mocha-phantomjs -R dot tests.html"
+  },
   "devDependencies": {
     "grunt-contrib-requirejs": "latest",
-    "grunt-contrib-watch": "~0.1.4"
+    "grunt-contrib-watch": "~0.1.4",
+    "mocha-phantomjs": "*"
   }
 }
