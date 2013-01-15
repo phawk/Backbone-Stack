@@ -4,6 +4,7 @@
 
 * Switch to using AMD compliant versions of Backbone and Underscore from [amdjs](https://github.com/amdjs)
 * Add [Almond](https://github.com/jrburke/almond) for more lightweight build script and no need to inclide require.js in output.
+* Updated jQuery to 1.9
 
 ## 10th Jan 2013
 
