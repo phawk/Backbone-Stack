@@ -59,16 +59,19 @@ module.exports = function(grunt) {
         requirejs: {
             compile: {
                 options: {
-                    name: "main",
+                    name: "../libs/almond/almond", // Path to almond requirejs production runner for built js
+                    include: ['main'], // Include the main module defined
+                    insertRequire: ['main'], // Add a require step in at the end for the main module.
+                    wrap: true, // Wrap everything up in a closure
                     generateSourceMaps: true, // Experimental
                     preserveLicenseComments: false, // Needs turned off for generateSourceMaps
                     optimize: "uglify2", // Supports generateSourceMaps
-                    baseUrl: "src",
+                    baseUrl: "src", // Base url for source code
                     out: "public/javascripts/build.js",
                     paths: {
                         "jquery": "../libs/jquery/jquery-1.8.3.min",
-                        "underscore": "../libs/underscore/underscore-min",
-                        "backbone": "../libs/backbone/backbone-min",
+                        "underscore": "../libs/underscore/underscore-amd",
+                        "backbone": "../libs/backbone/backbone-amd",
                         "hbs": "../libs/require/hbs",
                         "i18nprecompile": "../libs/require/hbs/i18nprecompile",
                         "json2": "../libs/require/hbs/json2",
@@ -76,13 +79,6 @@ module.exports = function(grunt) {
                         "text": "../libs/require/text"
                     },
                     shim: {
-                        'underscore': {
-                            exports: '_'
-                        },
-                        'backbone': {
-                            deps: ['underscore', 'jquery'],
-                            exports: 'Backbone'
-                        },
                         'handlebars': {
                             exports: 'Handlebars'
                         }

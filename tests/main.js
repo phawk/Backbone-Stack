@@ -2,8 +2,8 @@ require.config({
     baseUrl: "",
     paths: {
         "jquery": "../libs/jquery/jquery-1.8.3.min",
-        "underscore": "../libs/underscore/underscore-min",
-        "backbone": "../libs/backbone/backbone-min",
+        "underscore": "../libs/underscore/underscore-amd",
+        "backbone": "../libs/backbone/backbone-amd",
         "hbs": "../libs/require/hbs",
         "i18nprecompile": "../libs/require/hbs/i18nprecompile",
         "json2": "../libs/require/hbs/json2",
@@ -13,13 +13,6 @@ require.config({
         "text": "../libs/require/text"
     },
     shim: {
-        'underscore': {
-            exports: '_'
-        },
-        'backbone': {
-            deps: ['underscore', 'jquery'],
-            exports: 'Backbone'
-        },
         'handlebars': {
             exports: 'Handlebars'
         }

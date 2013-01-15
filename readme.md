@@ -4,13 +4,10 @@ This is my Backbone Stack for starting new projects, it alleviates a lot of the 
 
 [![Build Status](https://travis-ci.org/phawk/Backbone-Stack.png?branch=master)](https://travis-ci.org/phawk/Backbone-Stack)
 
-### Latest changes (10th Jan 2013)
+### Latest changes (15 Jan 2013)
 
-* Added headless unit testing with command line output with [phantomjs](http://phantomjs.org/) and [grunt-mocha](https://github.com/kmiyashiro/grunt-mocha).
-* Added `.travis.yml` file for travis-ci testing support
-* Added new grunt tasks for **test** and **build**
-* Easy to setup git pre-commit hook to test and build.
-* Inserted my JSHint settings to Gruntfile, all with comments so you can easily tweak, or view the [JSHint docs](http://www.jshint.com/docs/) for more.
+* Switch to using AMD compliant versions of Backbone and Underscore from [amdjs](https://github.com/amdjs)
+* Add [Almond](https://github.com/jrburke/almond) for more lightweight build script and no need to inclide require.js in output.
 
 [View the changelog](https://github.com/phawk/Backbone-Stack/blob/master/changelog.md)
 

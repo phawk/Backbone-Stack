@@ -1,4 +1,4 @@
-require(['app'], function(App) {
+define(['app'], function(App) {
 
     // Startup the app view
     new App();
