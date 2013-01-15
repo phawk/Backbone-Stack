@@ -8,6 +8,7 @@ This is my Backbone Stack for starting new projects, it alleviates a lot of the 
 
 * Switch to using AMD compliant versions of Backbone and Underscore from [amdjs](https://github.com/amdjs)
 * Add [Almond](https://github.com/jrburke/almond) for more lightweight build script and no need to inclide require.js in output.
+* Updated jQuery to 1.9
 
 [View the changelog](https://github.com/phawk/Backbone-Stack/blob/master/changelog.md)
 

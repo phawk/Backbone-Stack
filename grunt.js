@@ -69,7 +69,7 @@ module.exports = function(grunt) {
                     baseUrl: "src", // Base url for source code
                     out: "public/javascripts/build.js",
                     paths: {
-                        "jquery": "../libs/jquery/jquery-1.8.3.min",
+                        "jquery": "../libs/jquery/jquery.min",
                         "underscore": "../libs/underscore/underscore-amd",
                         "backbone": "../libs/backbone/backbone-amd",
                         "hbs": "../libs/require/hbs",
