@@ -15,6 +15,7 @@ This is my Backbone Stack for starting new projects, it alleviates a lot of the 
 
 * [Grunt](http://gruntjs.com/) - A task runner like Make, used to watch and compile the JS code
 * [Require JS](http://requirejs.org/) - To asynchronously load in all of the scripts and templates
+* [Almond](https://github.com/jrburke/almond) - To run the built AMD code in production
 * [Backbone JS](http://documentcloud.github.com/backbone/) - for MVC JavaScript
 * [jQuery](http://jquery.com/) - For DOM manipulation and ajax
 * [Handlebars JS](http://handlebarsjs.com/) - for templating
