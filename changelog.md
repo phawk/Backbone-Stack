@@ -1,5 +1,10 @@
 # Recent changes
 
+## 15 Jan 2013
+
+* Switch to using AMD compliant versions of Backbone and Underscore from [amdjs](https://github.com/amdjs)
+* Add [Almond](https://github.com/jrburke/almond) for more lightweight build script and no need to inclide require.js in output.
+
 ## 10th Jan 2013
 
 * Added headless unit testing with command line output with [phantomjs](http://phantomjs.org/) and [grunt-mocha](https://github.com/kmiyashiro/grunt-mocha).
