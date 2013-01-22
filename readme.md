@@ -1,4 +1,4 @@
-# Backbone Stack
+# Backbone Stack (0.1.0)
 
 This is my Backbone Stack for starting new projects, it alleviates a lot of the common boilerplate code and setup. It uses AMD modules, mocha for TDD and handlebars precompiled templates. Grunt plays a major role in automated linting, testsing and building your code.
 
@@ -75,6 +75,9 @@ $ grunt watch
 
 # Do a one off build - will lint and test your code first
 $ grunt build
+
+# Compile the handlebars templates
+$ grunt handlebars
 ```
 
 ## git pre-commit hook

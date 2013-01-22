@@ -34,7 +34,6 @@ module.exports = function(grunt) {
                 eqnull: true, // Allows == null check for null or undefined
                 browser: true, // Sets up globals for browser like window and document
                 maxdepth: 3, // Max nesting of methods 3 layers deep
-                maxparams: 4, // Max params passed to a method is 4
                 unused: true, // Warns on unused variables
                 expr: true, // Allowed for chais expect(false).to.be.false; assertion style.
                 devel: true, // Allows console.log's etc
@@ -85,7 +84,13 @@ module.exports = function(grunt) {
                         "jquery": "../vendor/jquery/jquery.min",
                         "underscore": "../vendor/underscore/underscore-amd",
                         "backbone": "../vendor/backbone/backbone-amd",
+                        "handlebars": "../vendor/handlebars/handlebars",
                         "templates": "../src/templates/templates"
+                    },
+                    shim: {
+                        'handlebars': {
+                            exports: 'Handlebars'
+                        }
                     }
                 }
             }
