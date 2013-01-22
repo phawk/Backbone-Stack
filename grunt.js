@@ -58,7 +58,6 @@ module.exports = function(grunt) {
         handlebars: {
             compile: {
                 options: {
-                    amd: true,
                     processName: function(filename) {
                         return filename.replace("src/templates/", "");
                     }
@@ -84,12 +83,15 @@ module.exports = function(grunt) {
                         "jquery": "../vendor/jquery/jquery.min",
                         "underscore": "../vendor/underscore/underscore-amd",
                         "backbone": "../vendor/backbone/backbone-amd",
-                        "handlebars": "../vendor/handlebars/handlebars",
+                        "handlebars": "../vendor/handlebars/handlebars.runtime",
                         "templates": "../src/templates/templates"
                     },
                     shim: {
                         'handlebars': {
                             exports: 'Handlebars'
+                        },
+                        'templates': {
+                            exports: 'JST'
                         }
                     }
                 }

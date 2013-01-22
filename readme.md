@@ -8,6 +8,7 @@ This is my Backbone Stack for starting new projects, it alleviates a lot of the 
 
 * Added [Happen](https://github.com/tmcw/happen) for testing UI events like clicks in detatched DOM nodes.
 * Now using [grunt-handlebars](https://github.com/gruntjs/grunt-contrib-handlebars/) to precompile the templates before requireJS even gets near them, this allows for better testing of views in unit tests.
+* Swapped out Handlebars full library for Handlebars.runtime.
 
 [View the changelog](https://github.com/phawk/Backbone-Stack/blob/master/changelog.md)
 
@@ -39,6 +40,9 @@ This is my Backbone Stack for starting new projects, it alleviates a lot of the 
 ```sh
 # Install grunt build tool
 $ npm install -g grunt
+
+# Install additional grunt tasks
+$ npm install
 ```
 
 * * *

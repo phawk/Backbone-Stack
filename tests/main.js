@@ -4,7 +4,7 @@ require.config({
         "jquery": "../vendor/jquery/jquery.min",
         "underscore": "../vendor/underscore/underscore-amd",
         "backbone": "../vendor/backbone/backbone-amd",
-        "handlebars": "../vendor/handlebars/handlebars",
+        "handlebars": "../vendor/handlebars/handlebars.runtime",
         "templates": "../src/templates/templates",
         "chai": "../vendor/chai/chai",
         "src": "../src"
@@ -12,6 +12,9 @@ require.config({
     shim: {
         'handlebars': {
             exports: 'Handlebars'
+        },
+        'templates': {
+            exports: 'JST'
         }
     },
     urlArgs: "bust=" + (new Date()).getTime() // cache-busting for development

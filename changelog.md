@@ -4,6 +4,7 @@
 
 * Added [Happen](https://github.com/tmcw/happen) for testing UI events like clicks in detatched DOM nodes.
 * Now using [grunt-handlebars](https://github.com/gruntjs/grunt-contrib-handlebars/) to precompile the templates before requireJS even gets near them, this allows for better testing of views in unit tests.
+* Swapped out Handlebars full library for Handlebars.runtime.
 
 ## 0.0.alpha - 15th Jan 2013
 
