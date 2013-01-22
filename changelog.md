@@ -1,6 +1,11 @@
 # Recent changes
 
-## 15 Jan 2013
+## Latest changes (22nd Jan 2013)
+
+* Added [Happen](https://github.com/tmcw/happen) for testing UI events like clicks in detatched DOM nodes.
+* Now using [grunt-handlebars](https://github.com/gruntjs/grunt-contrib-handlebars/) to precompile the templates before requireJS even gets near them, this allows for better testing of views in unit tests.
+
+## 15th Jan 2013
 
 * Switch to using AMD compliant versions of Backbone and Underscore from [amdjs](https://github.com/amdjs)
 * Add [Almond](https://github.com/jrburke/almond) for more lightweight build script and no need to inclide require.js in output.

@@ -72,7 +72,7 @@ module.exports = function(grunt) {
         requirejs: {
             compile: {
                 options: {
-                    name: "../libs/almond/almond", // Path to almond requirejs production runner for built js
+                    name: "../vendor/almond/almond", // Path to almond requirejs production runner for built js
                     include: ['main'], // Include the main module defined
                     insertRequire: ['main'], // Add a require step in at the end for the main module.
                     wrap: true, // Wrap everything up in a closure
@@ -82,9 +82,9 @@ module.exports = function(grunt) {
                     baseUrl: "src", // Base url for source code
                     out: "public/javascripts/build.js",
                     paths: {
-                        "jquery": "../libs/jquery/jquery.min",
-                        "underscore": "../libs/underscore/underscore-amd",
-                        "backbone": "../libs/backbone/backbone-amd",
+                        "jquery": "../vendor/jquery/jquery.min",
+                        "underscore": "../vendor/underscore/underscore-amd",
+                        "backbone": "../vendor/backbone/backbone-amd",
                         "templates": "../src/templates/templates"
                     }
                 }

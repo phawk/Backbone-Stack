@@ -1,11 +1,11 @@
 require.config({
     baseUrl: "",
     paths: {
-        "jquery": "../libs/jquery/jquery.min",
-        "underscore": "../libs/underscore/underscore-amd",
-        "backbone": "../libs/backbone/backbone-amd",
+        "jquery": "../vendor/jquery/jquery.min",
+        "underscore": "../vendor/underscore/underscore-amd",
+        "backbone": "../vendor/backbone/backbone-amd",
         "templates": "../src/templates/templates",
-        "chai": "../libs/chai/chai",
+        "chai": "../vendor/chai/chai",
         "src": "../src"
     },
     urlArgs: "bust=" + (new Date()).getTime() // cache-busting for development
