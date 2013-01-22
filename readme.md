@@ -1,14 +1,14 @@
-# Backbone Stack
+# Backbone Stack (0.1.0)
 
 This is my Backbone Stack for starting new projects, it alleviates a lot of the common boilerplate code and setup. It uses AMD modules, mocha for TDD and handlebars precompiled templates. Grunt plays a major role in automated linting, testsing and building your code.
 
 [![Build Status](https://travis-ci.org/phawk/Backbone-Stack.png?branch=master)](https://travis-ci.org/phawk/Backbone-Stack)
 
-### Latest changes (15 Jan 2013)
+### Latest changes (22nd Jan 2013)
 
-* Switch to using AMD compliant versions of Backbone and Underscore from [amdjs](https://github.com/amdjs)
-* Add [Almond](https://github.com/jrburke/almond) for more lightweight build script and no need to inclide require.js in output.
-* Updated jQuery to 1.9
+* Added [Happen](https://github.com/tmcw/happen) for testing UI events like clicks in detatched DOM nodes.
+* Now using [grunt-handlebars](https://github.com/gruntjs/grunt-contrib-handlebars/) to precompile the templates before requireJS even gets near them, this allows for better testing of views in unit tests.
+* Swapped out Handlebars full library for Handlebars.runtime.
 
 [View the changelog](https://github.com/phawk/Backbone-Stack/blob/master/changelog.md)
 
@@ -27,6 +27,7 @@ This is my Backbone Stack for starting new projects, it alleviates a lot of the 
 * [Mocha](http://visionmedia.github.com/mocha/) - TDD / BDD testing framework for JavaScript
 * [Chai.js](http://chaijs.com/) - Nice assertions
 * [Sinon](http://sinonjs.org/) - Spies, Stubs and Mocks
+* [Happen](https://github.com/tmcw/happen) - Testing UI events like clicks in detatched DOM nodes (fast)
 
 * * *
 
@@ -40,7 +41,7 @@ This is my Backbone Stack for starting new projects, it alleviates a lot of the 
 # Install grunt build tool
 $ npm install -g grunt
 
-# Install required node modules for grunt
+# Install additional grunt tasks
 $ npm install
 ```
 
@@ -78,6 +79,9 @@ $ grunt watch
 
 # Do a one off build - will lint and test your code first
 $ grunt build
+
+# Compile the handlebars templates
+$ grunt handlebars
 ```
 
 ## git pre-commit hook

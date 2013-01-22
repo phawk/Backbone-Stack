@@ -17,7 +17,7 @@ module.exports = function(grunt) {
             }
         },
         lint: {
-            files: ['grunt.js', 'src/**/*.js', 'tests/**/*.js']
+            files: ['grunt.js', 'src/**/!(templates).js', 'tests/**/*.js']
         },
         jshint: {
             options: {
@@ -34,7 +34,6 @@ module.exports = function(grunt) {
                 eqnull: true, // Allows == null check for null or undefined
                 browser: true, // Sets up globals for browser like window and document
                 maxdepth: 3, // Max nesting of methods 3 layers deep
-                maxparams: 4, // Max params passed to a method is 4
                 unused: true, // Warns on unused variables
                 expr: true, // Allowed for chais expect(false).to.be.false; assertion style.
                 devel: true, // Allows console.log's etc
@@ -56,10 +55,22 @@ module.exports = function(grunt) {
         mocha: {
             index: ['tests/test-runner.html']
         },
+        handlebars: {
+            compile: {
+                options: {
+                    processName: function(filename) {
+                        return filename.replace("src/templates/", "");
+                    }
+                },
+                files: {
+                    "src/templates/templates.js": "src/templates/**/*.html"
+                }
+            }
+        },
         requirejs: {
             compile: {
                 options: {
-                    name: "../libs/almond/almond", // Path to almond requirejs production runner for built js
+                    name: "../vendor/almond/almond", // Path to almond requirejs production runner for built js
                     include: ['main'], // Include the main module defined
                     insertRequire: ['main'], // Add a require step in at the end for the main module.
                     wrap: true, // Wrap everything up in a closure
@@ -69,24 +80,19 @@ module.exports = function(grunt) {
                     baseUrl: "src", // Base url for source code
                     out: "public/javascripts/build.js",
                     paths: {
-                        "jquery": "../libs/jquery/jquery.min",
-                        "underscore": "../libs/underscore/underscore-amd",
-                        "backbone": "../libs/backbone/backbone-amd",
-                        "hbs": "../libs/require/hbs",
-                        "i18nprecompile": "../libs/require/hbs/i18nprecompile",
-                        "json2": "../libs/require/hbs/json2",
-                        "handlebars": "../libs/handlebars/handlebars",
-                        "text": "../libs/require/text"
+                        "jquery": "../vendor/jquery/jquery.min",
+                        "underscore": "../vendor/underscore/underscore-amd",
+                        "backbone": "../vendor/backbone/backbone-amd",
+                        "handlebars": "../vendor/handlebars/handlebars.runtime",
+                        "templates": "../src/templates/templates"
                     },
                     shim: {
                         'handlebars': {
                             exports: 'Handlebars'
+                        },
+                        'templates': {
+                            exports: 'JST'
                         }
-                    },
-                    hbs: {
-                        disableI18n: true,
-                        disableHelpers: true,
-                        templateExtension: "html"
                     }
                 }
             }
@@ -95,12 +101,13 @@ module.exports = function(grunt) {
     });
 
     // Load Tasks
+    grunt.loadNpmTasks('grunt-contrib-handlebars');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-mocha');
 
     // Define tasks
-    grunt.registerTask('test', 'lint mocha');
+    grunt.registerTask('test', 'lint handlebars mocha');
     grunt.registerTask('build', 'test requirejs');
     grunt.registerTask('default', 'build');
 
