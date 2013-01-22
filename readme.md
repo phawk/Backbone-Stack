@@ -39,9 +39,6 @@ This is my Backbone Stack for starting new projects, it alleviates a lot of the 
 ```sh
 # Install grunt build tool
 $ npm install -g grunt
-
-# Install required node modules for grunt
-$ npm install
 ```
 
 * * *

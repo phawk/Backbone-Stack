@@ -1,10 +1,10 @@
 define(
-['jquery', 'underscore', 'backbone', 'hbs!templates/home/main'],
-function($, _, Backbone, mainHomeTemplate) {
+['jquery', 'underscore', 'backbone', 'templates'],
+function($, _, Backbone, templates) {
 
     return Backbone.View.extend({
 
-        template: mainHomeTemplate,
+        template: templates['home/main.html'],
 
         render: function() {
             this.$el.html(this.template());

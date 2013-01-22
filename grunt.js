@@ -17,7 +17,7 @@ module.exports = function(grunt) {
             }
         },
         lint: {
-            files: ['grunt.js', 'src/**/*.js', 'tests/**/*.js']
+            files: ['grunt.js', 'src/**/!(templates).js', 'tests/**/*.js']
         },
         jshint: {
             options: {
@@ -56,6 +56,19 @@ module.exports = function(grunt) {
         mocha: {
             index: ['tests/test-runner.html']
         },
+        handlebars: {
+            compile: {
+                options: {
+                    amd: true,
+                    processName: function(filename) {
+                        return filename.replace("src/templates/", "");
+                    }
+                },
+                files: {
+                    "src/templates/templates.js": "src/templates/**/*.html"
+                }
+            }
+        },
         requirejs: {
             compile: {
                 options: {
@@ -72,21 +85,7 @@ module.exports = function(grunt) {
                         "jquery": "../libs/jquery/jquery.min",
                         "underscore": "../libs/underscore/underscore-amd",
                         "backbone": "../libs/backbone/backbone-amd",
-                        "hbs": "../libs/require/hbs",
-                        "i18nprecompile": "../libs/require/hbs/i18nprecompile",
-                        "json2": "../libs/require/hbs/json2",
-                        "handlebars": "../libs/handlebars/handlebars",
-                        "text": "../libs/require/text"
-                    },
-                    shim: {
-                        'handlebars': {
-                            exports: 'Handlebars'
-                        }
-                    },
-                    hbs: {
-                        disableI18n: true,
-                        disableHelpers: true,
-                        templateExtension: "html"
+                        "templates": "../src/templates/templates"
                     }
                 }
             }
@@ -95,12 +94,13 @@ module.exports = function(grunt) {
     });
 
     // Load Tasks
+    grunt.loadNpmTasks('grunt-contrib-handlebars');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-mocha');
 
     // Define tasks
-    grunt.registerTask('test', 'lint mocha');
+    grunt.registerTask('test', 'lint handlebars mocha');
     grunt.registerTask('build', 'test requirejs');
     grunt.registerTask('default', 'build');
 

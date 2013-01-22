@@ -7,8 +7,12 @@
   },
   "devDependencies": {
     "grunt": "*",
+    "grunt-contrib-handlebars": "~0.3.3",
     "grunt-contrib-requirejs": "latest",
     "grunt-contrib-watch": "~0.1.4",
     "grunt-mocha": "~0.1.7"
+  },
+  "dependencies": {
+    "handlebars": "~1.0.7"
   }
 }
