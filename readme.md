@@ -94,7 +94,7 @@ $ touch .git/hooks/pre-commit
 # Make executable
 $ chmod +x .git/hooks/pre-commit
 # Build on commit
-$ echo "grunt build" > .git/hooks/pre-commit
+$ echo "grunt test" > .git/hooks/pre-commit
 ```
 
 * * *
