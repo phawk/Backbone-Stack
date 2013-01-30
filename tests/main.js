@@ -14,6 +14,7 @@ require.config({
             exports: 'Handlebars'
         },
         'templates': {
+            deps: ['handlebars'],
             exports: 'JST'
         }
     },

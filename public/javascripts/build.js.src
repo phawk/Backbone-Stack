@@ -3470,13 +3470,13 @@ define("handlebars", (function (global) {
 
 this["JST"] = this["JST"] || {};
 
-this["JST"]["home/main.html"] = function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["home/main.html"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   helpers = helpers || Handlebars.helpers; data = data || {};
   
 
 
-  return "<div class=\"hero-unit\">\n	<h1>Welcome</h1>\n</div>";};
-define("templates", (function (global) {
+  return "<div class=\"hero-unit\">\n	<h1>Welcome</h1>\n</div>";});
+define("templates", ["handlebars"], (function (global) {
     return function () {
         var ret, fn;
         return ret || global.JST;
@@ -3484,12 +3484,12 @@ define("templates", (function (global) {
 }(this)));
 
 define('views/home/main',
-['jquery', 'underscore', 'backbone', 'handlebars', 'templates'],
-function($, _, Backbone, Handlebars, templates) {
+['jquery', 'underscore', 'backbone', 'templates'],
+function($, _, Backbone, templates) {
 
     return Backbone.View.extend({
 
-        template: Handlebars.template(templates['home/main.html']),
+        template: templates['home/main.html'],
 
         render: function() {
             this.$el.html(this.template());

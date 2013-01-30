@@ -60,7 +60,8 @@ module.exports = function(grunt) {
                 options: {
                     processName: function(filename) {
                         return filename.replace("src/templates/", "");
-                    }
+                    },
+                    wrapped: true
                 },
                 files: {
                     "src/templates/templates.js": "src/templates/**/*.html"
@@ -91,6 +92,7 @@ module.exports = function(grunt) {
                             exports: 'Handlebars'
                         },
                         'templates': {
+                            deps: ['handlebars'],
                             exports: 'JST'
                         }
                     }
