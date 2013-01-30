@@ -1,5 +1,9 @@
 # Recent changes
 
+## 0.1.1 30th Jan 2013
+
+* Make templates wrapped with Handlebars.template by default.
+
 ## 0.1.0 - 22nd Jan 2013
 
 * Added [Happen](https://github.com/tmcw/happen) for testing UI events like clicks in detatched DOM nodes.

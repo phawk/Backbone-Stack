@@ -1,14 +1,12 @@
-# Backbone Stack (0.1.0)
+# Backbone Stack (0.1.1)
 
 This is my Backbone Stack for starting new projects, it alleviates a lot of the common boilerplate code and setup. It uses AMD modules, mocha for TDD and handlebars precompiled templates. Grunt plays a major role in automated linting, testsing and building your code.
 
 [![Build Status](https://travis-ci.org/phawk/Backbone-Stack.png?branch=master)](https://travis-ci.org/phawk/Backbone-Stack)
 
-### Latest changes (22nd Jan 2013)
+### Latest changes (30th Jan 2013)
 
-* Added [Happen](https://github.com/tmcw/happen) for testing UI events like clicks in detatched DOM nodes.
-* Now using [grunt-handlebars](https://github.com/gruntjs/grunt-contrib-handlebars/) to precompile the templates before requireJS even gets near them, this allows for better testing of views in unit tests.
-* Swapped out Handlebars full library for Handlebars.runtime.
+* Make templates wrapped with Handlebars.template by default.
 
 [View the changelog](https://github.com/phawk/Backbone-Stack/blob/master/changelog.md)
 
