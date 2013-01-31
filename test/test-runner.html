@@ -19,13 +19,22 @@
     <script src="../vendor/mocha/mocha.js"></script>
     <script src="../vendor/sinon/sinon.js"></script>
     <script>
-        var Handlebars = {
-        };
         mocha.setup('tdd');
     </script>
 
     <script src="../vendor/happen/happen.js"></script>
-    <script data-main="main" src="../vendor/require/require.js"></script>
+    <script src="../vendor/require/require.js"></script>
+    <script src="../require.config.js"></script>
+    <script>
+    require([
+        // Add more test modules in here!
+        "../test/helpers/sandbox.test",
+        "../test/views/home/main.test"
+    ], function() {
+        // Start the test runner
+        mocha.run();
+    });
+    </script>
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 define(
-["chai", "src/helpers/sandbox"],
+["chai", "helpers/sandbox"],
 function(chai, Sandbox) {
 
     var expect = chai.expect;

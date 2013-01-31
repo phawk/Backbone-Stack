@@ -1,30 +1,20 @@
 require.config({
-    baseUrl: "",
+    baseUrl: "../src",
     paths: {
+        // App deps
         "jquery": "../vendor/jquery/jquery.min",
         "underscore": "../vendor/underscore/underscore-amd",
         "backbone": "../vendor/backbone/backbone-amd",
         "handlebars": "../vendor/handlebars/handlebars.runtime",
-        "templates": "../src/templates/templates",
+
+        // Dev / Test deps
         "chai": "../vendor/chai/chai",
-        "src": "../src"
+        "test": "../test"
     },
     shim: {
         'handlebars': {
             exports: 'Handlebars'
-        },
-        'templates': {
-            deps: ['handlebars'],
-            exports: 'JST'
         }
     },
     urlArgs: "bust=" + (new Date()).getTime() // cache-busting for development
-});
-
-require([
-    "helpers/sandbox.test",
-    "views/home/main.test"
-], function() {
-    // Start the test runner
-    mocha.run();
 });

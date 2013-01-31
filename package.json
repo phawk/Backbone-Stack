@@ -6,13 +6,11 @@
     "test": "grunt build"
   },
   "devDependencies": {
-    "grunt": "*",
-    "grunt-contrib-handlebars": "~0.3.3",
-    "grunt-contrib-requirejs": "latest",
-    "grunt-contrib-watch": "~0.1.4",
-    "grunt-mocha": "~0.1.7"
-  },
-  "dependencies": {
-    "handlebars": "~1.0.7"
+    "grunt": "0.4.0rc7",
+    "grunt-contrib-jshint": "0.1.1rc6",
+    "grunt-contrib-handlebars": "0.5.2rc7",
+    "grunt-contrib-requirejs": "0.4.0rc7",
+    "grunt-contrib-watch": "0.2.0rc7",
+    "grunt-mocha": "~0.2.1"
   }
 }

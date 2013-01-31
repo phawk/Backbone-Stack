@@ -1,14 +1,13 @@
 define(
-['jquery', 'underscore', 'backbone', 'router'],
-function($, _, Backbone, Router) {
+['jquery', 'views/home/main'],
+function($, MainHomeView) {
 
-    return Backbone.View.extend({
-
+    return {
         initialize: function() {
-            // Boot up the router
-            Router.initialize();
+            new MainHomeView({
+                el: $(".main-app")
+            }).render();
         }
-
-    });
+    };
 
 });

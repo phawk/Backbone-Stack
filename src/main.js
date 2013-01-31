@@ -1,6 +1,6 @@
-define(['app'], function(App) {
+define(['app'], function(app) {
 
-    // Startup the app view
-    new App();
+    // Boot the app
+    app.initialize();
 
 });

@@ -1,5 +1,5 @@
 define(
-["jquery", "chai", "src/views/home/main"],
+["jquery", "chai", "views/home/main"],
 function($, chai, HomeMainView) {
 
     var expect = chai.expect;

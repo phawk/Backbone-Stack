@@ -3468,6 +3468,8 @@ define("handlebars", (function (global) {
     };
 }(this)));
 
+define('templates',['handlebars'], function(Handlebars) {
+
 this["JST"] = this["JST"] || {};
 
 this["JST"]["home/main.html"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -3476,16 +3478,13 @@ this["JST"]["home/main.html"] = Handlebars.template(function (Handlebars,depth0,
 
 
   return "<div class=\"hero-unit\">\n	<h1>Welcome</h1>\n</div>";});
-define("templates", ["handlebars"], (function (global) {
-    return function () {
-        var ret, fn;
-        return ret || global.JST;
-    };
-}(this)));
 
+return this["JST"];
+
+});
 define('views/home/main',
-['jquery', 'underscore', 'backbone', 'templates'],
-function($, _, Backbone, templates) {
+['backbone', 'templates'],
+function(Backbone, templates) {
 
     return Backbone.View.extend({
 
@@ -3501,61 +3500,23 @@ function($, _, Backbone, templates) {
 
 });
 
-define('router',
-['jquery', 'underscore', 'backbone', 'views/home/main'],
-function($, _, Backbone, MainHomeView) {
+define('app',
+['jquery', 'views/home/main'],
+function($, MainHomeView) {
 
-    var AppRouter = Backbone.Router.extend({
-
-        routes: {
-            "": "homepage",
-            "*actions": "defaultAction"
-        },
-
-        homepage: function() {
-            // Homepage
+    return {
+        initialize: function() {
             new MainHomeView({
                 el: $(".main-app")
             }).render();
-        },
-
-        defaultAction: function() {
-            // 404 route
         }
-
-    });
-
-    return {
-
-        initialize: function() {
-            var router = new AppRouter();
-
-            Backbone.history.start();
-
-            return router;
-        }
-
     };
 
 });
-define('app',
-['jquery', 'underscore', 'backbone', 'router'],
-function($, _, Backbone, Router) {
+define('main',['app'], function(app) {
 
-    return Backbone.View.extend({
-
-        initialize: function() {
-            // Boot up the router
-            Router.initialize();
-        }
-
-    });
-
-});
-define('main',['app'], function(App) {
-
-    // Startup the app view
-    new App();
+    // Boot the app
+    app.initialize();
 
 });
 require(["main"]);

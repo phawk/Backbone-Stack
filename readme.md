@@ -1,12 +1,15 @@
-# Backbone Stack (0.1.1)
+# Backbone Stack (0.2.0)
 
 A pre-configured Backbone Stack for starting new projects, it alleviates a lot of the common boilerplate code and setup. It uses AMD modules, mocha for TDD and handlebars precompiled templates. Grunt plays a major role in automated linting, testsing and building your code.
 
 [![Build Status](https://travis-ci.org/phawk/Backbone-Stack.png?branch=master)](https://travis-ci.org/phawk/Backbone-Stack)
 
-### Latest changes (30th Jan 2013)
+### Latest changes (31st Jan 2013)
 
-* Make templates wrapped with Handlebars.template by default.
+* Move index.html to root, makes it easier to use Backbone stack with other server side setups.
+* Rename `public/` to `assets/` to make more sense.
+* Rename `tests/` to `test/` as it seems more conventional.
+* Update grunt to the latest version.
 
 [View the changelog](https://github.com/phawk/Backbone-Stack/blob/master/changelog.md)
 
@@ -49,16 +52,16 @@ $ npm install
 
 ## Running your app
 
-Open up the `public/index.html` file in your browser to view your app, it will be using pre-compiled templates and build and minified JS.
+Open up the `index.html` file in your browser to view your app, it will be using pre-compiled templates and build and minified JS.
 
 ## Testing your code
 
-The unit tests can be opened up in the browser with the `tests/test-runner.html` file, or can be done through grunt on the command line.
+The unit tests can be opened up in the browser with the `test/test-runner.html` file, or can be done through grunt on the command line.
 
 The idea behind linting first, then testing and then building is to fail as quickly and early as possible, this will really help to boost productivity.
 
 ```sh
-# Watch src/ and tests/ files and lint, test, then build on change (handy for TDD)
+# Watch src/ and test/ files and lint, test, then build on change (handy for TDD)
 $ grunt watch
 
 # Lint and test files
@@ -72,7 +75,7 @@ $ grunt test
 All of the JavaScript is pre-build using [grunt](http://gruntjs.com/) and the r.js optimiser, this means your development environment better simulates what will be served in production.
 
 ```sh
-# Watch src/ and tests/ files and test, then build on change
+# Watch src/ and test/ files and test, then build on change
 $ grunt watch
 
 # Do a one off build - will lint and test your code first

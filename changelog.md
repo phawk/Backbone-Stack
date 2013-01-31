@@ -1,5 +1,12 @@
 # Recent changes
 
+## 0.2.0 31st Jan 2013
+
+* Move index.html to root, makes it easier to use Backbone stack with other server side setups.
+* Rename `public/` to `assets/` to make more sense.
+* Rename `tests/` to `test/` as it seems more conventional.
+* Update grunt to the latest version.
+
 ## 0.1.1 30th Jan 2013
 
 * Make templates wrapped with Handlebars.template by default.
