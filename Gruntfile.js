@@ -86,7 +86,7 @@ module.exports = function(grunt) {
         requirejs: {
             compile: {
                 options: {
-                    name: "../vendor/almond/almond", // Path to almond requirejs production runner for built js
+                    name: "../components/almond/almond", // Path to almond requirejs production runner for built js
                     baseUrl: "src",
                     mainConfigFile: "./require.config.js",
                     include: ['main'], // Include the main module defined

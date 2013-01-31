@@ -9,7 +9,8 @@ A pre-configured Backbone Stack for starting new projects, it alleviates a lot o
 * Move index.html to root, makes it easier to use Backbone stack with other server side setups.
 * Rename `public/` to `assets/` to make more sense.
 * Rename `tests/` to `test/` as it seems more conventional.
-* Update grunt to the latest version.
+* Update Grunt to the latest version.
+* Use [Bower](http://twitter.github.com/bower/) for package management
 
 [View the changelog](https://github.com/phawk/Backbone-Stack/blob/master/changelog.md)
 
@@ -39,11 +40,17 @@ A pre-configured Backbone Stack for starting new projects, it alleviates a lot o
 **Note** you will need [node.js and npm](http://nodejs.org) and [phantomJS](http://phantomjs.org) for headless unit tests.
 
 ```sh
+# Install bower package manager
+$ npm install -g bower
+
 # Install grunt build tool
-$ npm install -g grunt
+$ npm install -g grunt-cli
 
 # Install additional grunt tasks
 $ npm install
+
+# Install client-side packages
+$ bower install
 ```
 
 * * *
@@ -52,7 +59,7 @@ $ npm install
 
 ## Running your app
 
-Open up the `index.html` file in your browser to view your app, it will be using pre-compiled templates and build and minified JS.
+Open up the `./index.html` file in your browser to view your app, it will be using pre-compiled templates and build and minified JS.
 
 ## Testing your code
 

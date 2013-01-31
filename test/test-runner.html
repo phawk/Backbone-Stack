@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="../vendor/mocha/mocha.css">
+    <link rel="stylesheet" href="../components/mocha/mocha.css">
 </head>
 
 <body>
@@ -16,14 +16,13 @@
     <div id="mocha"></div>
 
     <!-- Testing Libraries -->
-    <script src="../vendor/mocha/mocha.js"></script>
-    <script src="../vendor/sinon/sinon.js"></script>
+    <script src="../components/mocha/mocha.js"></script>
+    <script src="../components/sinon.js/sinon.js"></script>
     <script>
         mocha.setup('tdd');
     </script>
 
-    <script src="../vendor/happen/happen.js"></script>
-    <script src="../vendor/require/require.js"></script>
+    <script src="../components/requirejs/require.js"></script>
     <script src="../require.config.js"></script>
     <script>
     require([

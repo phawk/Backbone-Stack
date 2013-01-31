@@ -2,13 +2,13 @@ require.config({
     baseUrl: "../src",
     paths: {
         // App deps
-        "jquery": "../vendor/jquery/jquery.min",
-        "underscore": "../vendor/underscore/underscore-amd",
-        "backbone": "../vendor/backbone/backbone-amd",
-        "handlebars": "../vendor/handlebars/handlebars.runtime",
+        "jquery": "../components/jquery/jquery",
+        "underscore": "../components/underscore-amd/underscore",
+        "backbone": "../components/backbone-amd/backbone",
+        "handlebars": "../components/handlebars/handlebars.runtime",
 
         // Dev / Test deps
-        "chai": "../vendor/chai/chai",
+        "chai": "../components/chai/chai",
         "test": "../test"
     },
     shim: {

@@ -1,3 +1,11 @@
-.DS_Store
-tmp/
+# Third party libraries
 node_modules/
+components/
+
+# bad.
+.DS_Store
+*.swp
+tmp/
+
+# wild
+todo.md

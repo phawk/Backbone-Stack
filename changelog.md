@@ -5,7 +5,8 @@
 * Move index.html to root, makes it easier to use Backbone stack with other server side setups.
 * Rename `public/` to `assets/` to make more sense.
 * Rename `tests/` to `test/` as it seems more conventional.
-* Update grunt to the latest version.
+* Update Grunt to the latest version.
+* Use [Bower](http://twitter.github.com/bower/) for package management
 
 ## 0.1.1 30th Jan 2013
 
