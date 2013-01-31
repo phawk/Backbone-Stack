@@ -1,4 +1,4 @@
-# Backbone Stack (0.2.0)
+# Backbone Stack (0.2.1)
 
 A pre-configured Backbone Stack for starting new projects, it alleviates a lot of the common boilerplate code and setup. It uses AMD modules, mocha for TDD and handlebars precompiled templates. Grunt plays a major role in automated linting, testsing and building your code.
 
@@ -6,10 +6,6 @@ A pre-configured Backbone Stack for starting new projects, it alleviates a lot o
 
 ### Latest changes (31st Jan 2013)
 
-* Move index.html to root, makes it easier to use Backbone stack with other server side setups.
-* Rename `public/` to `assets/` to make more sense.
-* Rename `tests/` to `test/` as it seems more conventional.
-* Update Grunt to the latest version.
 * Use [Bower](http://twitter.github.com/bower/) for package management
 
 [View the changelog](https://github.com/phawk/Backbone-Stack/blob/master/changelog.md)
