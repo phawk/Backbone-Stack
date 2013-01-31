@@ -25,13 +25,14 @@ A pre-configured Backbone Stack for starting new projects, it alleviates a lot o
 * [Mocha](http://visionmedia.github.com/mocha/) - TDD / BDD testing framework for JavaScript
 * [Chai.js](http://chaijs.com/) - Nice assertions
 * [Sinon](http://sinonjs.org/) - Spies, Stubs and Mocks
-* [Happen](https://github.com/tmcw/happen) - Testing UI events like clicks in detatched DOM nodes (fast)
 
 * * *
 
 # Setup
 
 ## Installing dependencies
+
+[Bower](http://twitter.github.com/bower/) is used as for package management, the default client-side dependencies are listed in the `component.json` file.
 
 **Note** you will need [node.js and npm](http://nodejs.org) and [phantomJS](http://phantomjs.org) for headless unit tests.
 
@@ -48,6 +49,18 @@ $ npm install
 # Install client-side packages
 $ bower install
 ```
+
+### Installing new dependencies
+
+```sh
+# Search for a library
+$ bower search [name..]
+
+# Install a library and save it to the component.json file
+$ bower install [name..] --save
+```
+
+[Bower documentation](http://twitter.github.com/bower/)
 
 * * *
 
