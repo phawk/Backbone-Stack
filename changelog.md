@@ -1,5 +1,9 @@
 # Recent changes
 
+## 0.2.2 7th Feb 2013
+
+* Include typeOf() and is() helpers for more reliable type checking.
+
 ## 0.2.1 31st Jan 2013
 
 * Use [Bower](http://twitter.github.com/bower/) for package management

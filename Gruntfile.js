@@ -66,9 +66,25 @@ module.exports = function(grunt) {
                 }
             }
         },
+
+
+        /**
+        *  Testing
+        *  =======
+        *
+        *  Run your unit tests in headless phantomJS
+        */
         mocha: {
             index: ['test/test-runner.html']
         },
+
+
+        /**
+        *  Templating
+        *  ==========
+        *
+        *  Pre-compile your handlebars templates
+        */
         handlebars: {
             compile: {
                 options: {
@@ -83,6 +99,14 @@ module.exports = function(grunt) {
                 }
             }
         },
+
+
+        /**
+        *  Building
+        *  ========
+        *
+        *  Build your amd modules into a single minified JS file
+        */
         requirejs: {
             compile: {
                 options: {
@@ -99,6 +123,7 @@ module.exports = function(grunt) {
                 }
             }
         }
+
     });
 
     // Load Tasks
