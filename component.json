@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "jquery": "~1.9.0",
+    "jquery": "~1.9.1",
     "requirejs": "~2.1.2",
     "mocha": "~1.8.1",
     "handlebars": "~1.0.0-rc.1",
@@ -8,6 +8,7 @@
     "almond": "~0.2.4",
     "backbone-amd": "~0.9.10",
     "underscore-amd": "~1.4.4",
-    "sinon.js": "latest"
+    "sinon.js": "latest",
+    "bootstrap": "latest"
   }
 }

@@ -9,11 +9,17 @@ require.config({
 
         // Dev / Test deps
         "chai": "../components/chai/chai",
-        "test": "../test"
+        "test": "../test",
+        
+        // Include bootstrap as a shim as it doesn't support AMD. See PR at https://github.com/twitter/bootstrap/pull/534
+        "bootstrap": "../components/bootstrap/docs/assets/js/bootstrap"
     },
     shim: {
         'handlebars': {
             exports: 'Handlebars'
+        },
+        'bootstrap': {
+            deps: ['jquery']
         }
     },
     urlArgs: "bust=" + (new Date()).getTime() // cache-busting for development
