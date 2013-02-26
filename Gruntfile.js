@@ -122,6 +122,24 @@ module.exports = function(grunt) {
                     out: "assets/javascripts/build.js"
                 }
             }
+        },
+        
+        /**
+         *  Stylesheets
+         *  ===========
+         *
+         *  Compile, concat & lint css and less files into a single output file
+         */
+        less: {
+            dist: {
+                options: {
+                    paths: ["src/styles"],
+                    yuicompress: true
+                },
+                files: {
+                    'assets/stylesheets/styles.css': 'src/styles/main.less'
+                }
+            }
         }
 
     });
@@ -132,10 +150,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-mocha');
+    grunt.loadNpmTasks('grunt-contrib-less');
 
     // Define tasks
     grunt.registerTask('test', ['jshint', 'handlebars', 'mocha']);
-    grunt.registerTask('build', ['test', 'requirejs']);
+    grunt.registerTask('styles', ['less']);
+    grunt.registerTask('build', ['test', 'requirejs', 'styles']);
     grunt.registerTask('default', 'build');
 
 };
