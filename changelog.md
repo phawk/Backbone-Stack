@@ -1,5 +1,10 @@
 # Recent changes
 
+## 0.2.3 26th Feb 2013
+
+* Add less compile step
+* Add boostrap from bower
+
 ## 0.2.2 7th Feb 2013
 
 * Include typeOf() and is() helpers for more reliable type checking.

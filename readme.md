@@ -1,13 +1,13 @@
-# Backbone Stack (0.2.2)
+# Backbone Stack (0.2.3)
 
 A pre-configured Backbone Stack for starting new projects, it alleviates a lot of the common boilerplate code and setup. It uses AMD modules, mocha for TDD and handlebars precompiled templates. Grunt plays a major role in automated linting, testsing and building your code.
 
 [![Build Status](https://travis-ci.org/phawk/Backbone-Stack.png?branch=master)](https://travis-ci.org/phawk/Backbone-Stack)
 
-### Latest changes (7th Feb 2013)
+### Latest changes (26th Feb 2013)
 
-* Include typeOf() and is() helpers for more reliable type checking.
-* Use [Bower](http://twitter.github.com/bower/) for package management
+* Add less compile step
+* Add boostrap from bower
 
 [View the changelog](https://github.com/phawk/Backbone-Stack/blob/master/changelog.md)
 
