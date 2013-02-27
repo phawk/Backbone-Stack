@@ -1,6 +1,6 @@
 # Backbone Stack (0.2.3)
 
-A pre-configured Backbone Stack for starting new projects, it alleviates a lot of the common boilerplate code and setup. It uses AMD modules, mocha for TDD and handlebars precompiled templates. Grunt plays a major role in automated linting, testsing and building your code.
+A pre-configured Backbone Stack for starting new projects, it alleviates a lot of the common boilerplate code and setup. It uses AMD modules, mocha for TDD and handlebars precompiled templates. Grunt plays a major role in automated linting, testing and building your code.
 
 [![Build Status](https://travis-ci.org/phawk/Backbone-Stack.png?branch=master)](https://travis-ci.org/phawk/Backbone-Stack)
 
@@ -100,6 +100,9 @@ $ grunt build
 
 # Compile the handlebars templates
 $ grunt handlebars
+
+# Compile less and css styles
+$ grunt styles
 ```
 
 ## git pre-commit hook
