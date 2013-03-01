@@ -1,6 +1,6 @@
 # Backbone Stack (0.2.4)
 
-A pre-configured Backbone Stack for starting new projects, it alleviates a lot of the common boilerplate code and setup. It uses AMD modules, mocha for TDD and handlebars precompiled templates. Grunt plays a major role in automated linting, testing and building your code.
+A pre-configured Backbone Stack for starting new projects, it alleviates a lot of the common boilerplate code and setup. It uses AMD modules, mocha for TDD and handlebars precompiled templates. Grunt plays a major role in the automated linting, testing and building of your code.
 
 [![Build Status](https://travis-ci.org/phawk/Backbone-Stack.png?branch=master)](https://travis-ci.org/phawk/Backbone-Stack)
 
@@ -52,7 +52,7 @@ $ npm install
 $ bower install
 ```
 
-### Installing new dependencies
+### Installing new dependencies - [Bower documentation](http://twitter.github.com/bower/)
 
 ```sh
 # Search for a library
@@ -61,8 +61,6 @@ $ bower search [name..]
 # Install a library and save it to the component.json file
 $ bower install [name..] --save
 ```
-
-[Bower documentation](http://twitter.github.com/bower/)
 
 * * *
 
@@ -121,7 +119,7 @@ $ echo "grunt test" > .git/hooks/pre-commit
 
 * * *
 
-# License
+# MIT License
 
 Copyright (C) 2013 Pete Hawkins
 
