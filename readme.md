@@ -119,6 +119,13 @@ $ echo "grunt test" > .git/hooks/pre-commit
 
 * * *
 
+# Contributors
+
+* Pete Hawkins - github.com/phawk
+* Miguel Andrade - github.com/miguelcobain
+
+* * *
+
 # MIT License
 
 Copyright (C) 2013 Pete Hawkins
