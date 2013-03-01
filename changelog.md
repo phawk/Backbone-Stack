@@ -1,5 +1,9 @@
 # Recent changes
 
+## 0.2.4 1st Mar 2013
+
+* Add [node-version-assets](https://github.com/techjacker/node-version-assets) for cache busting
+
 ## 0.2.3 26th Feb 2013
 
 * Add less compile step
