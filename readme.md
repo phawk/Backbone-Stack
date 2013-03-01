@@ -1,11 +1,12 @@
-# Backbone Stack (0.2.3)
+# Backbone Stack (0.2.4)
 
 A pre-configured Backbone Stack for starting new projects, it alleviates a lot of the common boilerplate code and setup. It uses AMD modules, mocha for TDD and handlebars precompiled templates. Grunt plays a major role in automated linting, testing and building your code.
 
 [![Build Status](https://travis-ci.org/phawk/Backbone-Stack.png?branch=master)](https://travis-ci.org/phawk/Backbone-Stack)
 
-### Latest changes (26th Feb 2013)
+### Latest changes (1st Mar 2013)
 
+* Add [node-version-assets](https://github.com/techjacker/node-version-assets) for cache busting
 * Add less compile step
 * Add boostrap from bower
 
@@ -89,7 +90,7 @@ $ grunt test
 
 ## Building your code
 
-All of the JavaScript is pre-build using [grunt](http://gruntjs.com/) and the r.js optimiser, this means your development environment better simulates what will be served in production.
+All of the JavaScript is pre-build using [grunt](http://gruntjs.com/) and the r.js optimiser, this means your development environment better simulates what will be served in production. Your built CSS and JS are then version and your index.html file is automatically updated with the versioned filename.
 
 ```sh
 # Watch src/ and test/ files and test, then build on change

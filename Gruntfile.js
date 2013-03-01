@@ -144,6 +144,19 @@ module.exports = function(grunt) {
 
     });
 
+    // Version assets
+    grunt.registerTask('version-assets', 'version the static assets just created', function() {
+
+        var Version = require("node-version-assets");
+        var versionInstance = new Version({
+            assets: ['assets/stylesheets/styles.css', 'assets/javascripts/build.js'],
+            grepFiles: ['index.html']
+        });
+
+        var cb = this.async(); // grunt async callback
+        versionInstance.run(cb);
+    });
+
     // Load Tasks
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-handlebars');
@@ -155,7 +168,7 @@ module.exports = function(grunt) {
     // Define tasks
     grunt.registerTask('test', ['jshint', 'handlebars', 'mocha']);
     grunt.registerTask('styles', ['less']);
-    grunt.registerTask('build', ['test', 'requirejs', 'styles']);
+    grunt.registerTask('build', ['test', 'requirejs', 'styles', 'version-assets']);
     grunt.registerTask('default', 'build');
 
 };
