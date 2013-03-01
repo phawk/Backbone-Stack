@@ -13,5 +13,8 @@
     "grunt-contrib-watch": "0.2.0rc7",
     "grunt-mocha": "~0.2.1",
     "grunt-contrib-less": "~0.5.0"
+  },
+  "dependencies": {
+    "node-version-assets": "0.0.6"
   }
 }
