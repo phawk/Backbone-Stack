@@ -1,5 +1,9 @@
 # Recent changes
 
+## 0.2.5 21st Mar 2013
+
+* Upgrade Backbone to v 1.0.0.
+
 ## 0.2.4 1st Mar 2013
 
 * Add [node-version-assets](https://github.com/techjacker/node-version-assets) for cache busting
