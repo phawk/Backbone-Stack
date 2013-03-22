@@ -6,7 +6,7 @@
     "handlebars": "~1.0.0-rc.1",
     "chai": "~1.4.2",
     "almond": "~0.2.4",
-    "backbone-amd": "~0.9.10",
+    "backbone-amd": "~1.0.0",
     "underscore-amd": "~1.4.4",
     "sinon.js": "latest",
     "bootstrap": "latest"
