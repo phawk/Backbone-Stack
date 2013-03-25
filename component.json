@@ -8,7 +8,6 @@
     "almond": "~0.2.4",
     "backbone-amd": "~1.0.0",
     "underscore-amd": "~1.4.4",
-    "sinon": "latest",
     "bootstrap": "latest"
   }
 }

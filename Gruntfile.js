@@ -32,7 +32,7 @@ module.exports = function(grunt) {
         *  Catch errors quickly with JS Hint
         */
         jshint: {
-            all: ['Gruntfile.js', 'src/**/!(templates).js', 'test/**/*.js'],
+            all: ['Gruntfile.js', 'src/**/!(templates).js', 'test/!(libs)/*.js'],
             options: {
                 es5: true, // Allows EcmaScript5 syntax
                 curly: true, // Always use curlys {}
