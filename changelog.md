@@ -1,5 +1,9 @@
 # Recent changes
 
+## 0.2.6 31st Mar 2013
+
+* Update package.json to use grunt 0.4.1 for node 0.10.x
+
 ## 0.2.5 21st Mar 2013
 
 * Upgrade Backbone to v 1.0.0.

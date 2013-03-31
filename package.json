@@ -6,7 +6,7 @@
     "test": "grunt build"
   },
   "devDependencies": {
-    "grunt": "0.4.0rc7",
+    "grunt": "0.4.1",
     "grunt-contrib-jshint": "0.1.1rc6",
     "grunt-contrib-handlebars": "0.5.2rc7",
     "grunt-contrib-requirejs": "0.4.0rc7",
