@@ -1,5 +1,10 @@
 # Recent changes
 
+## 0.3.0 4th May 2013
+
+* Update node version assets to 0.0.8 for some nice bugfixes
+* Update travis to use node 0.10
+
 ## 0.2.6 31st Mar 2013
 
 * Update package.json to use grunt 0.4.1 for node 0.10.x
