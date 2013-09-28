@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         */
         watch: {
             scripts: {
-                files: ['src/**/!(templates).js', 'src/**/*.html', 'tests/**/*.js'],
+                files: ['src/**/!(templates).js', 'src/**/*.html', 'test/**/*.js'],
                 tasks: ['build'],
                 options: {
                     interrupt: true
@@ -123,7 +123,7 @@ module.exports = function(grunt) {
                 }
             }
         },
-        
+
         /**
          *  Stylesheets
          *  ===========
