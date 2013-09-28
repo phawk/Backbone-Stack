@@ -1,6 +1,7 @@
 {
+  "name": "application-name",
   "dependencies": {
-    "jquery": "~1.9.1",
+    "jquery": "~2.0.3",
     "requirejs": "~2.1.2",
     "mocha": "~1.8.1",
     "handlebars": "~1.0.0-rc.1",
