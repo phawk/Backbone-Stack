@@ -2,6 +2,7 @@
 
 ## 0.3.2 28th Sept 2013
 
+* Tweak sample tests with sinon.sandbox
 * Bugfix: Grunt watcher for `test` directory
 
 ## 0.3.1 28th Sept 2013

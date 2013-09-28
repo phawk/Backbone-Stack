@@ -6,6 +6,7 @@ A pre-configured Backbone Stack for starting new projects, it alleviates a lot o
 
 ### Latest changes (28th Sept 2013)
 
+* Tweak sample tests with sinon.sandbox
 * Bugfix: Grunt watcher for `test` directory
 * Update to new `bower` and update components
 
