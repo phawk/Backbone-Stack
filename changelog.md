@@ -1,5 +1,9 @@
 # Recent changes
 
+## 0.3.1 28th Sept 2013
+
+* Update to new `bower` and update components
+
 ## 0.3.0 4th May 2013
 
 * Update node version assets to 0.0.8 for some nice bugfixes
