@@ -10,9 +10,9 @@ require.config({
         // Dev / Test deps
         "chai": "../components/chai/chai",
         "test": "../test",
-        
+
         // Include bootstrap as a shim as it doesn't support AMD. See PR at https://github.com/twitter/bootstrap/pull/534
-        "bootstrap": "../components/bootstrap/docs/assets/js/bootstrap"
+        "bootstrap": "../components/bootstrap/dist/js/bootstrap"
     },
     shim: {
         'handlebars': {
