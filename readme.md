@@ -52,7 +52,7 @@ $ npm install
 $ bower install
 ```
 
-### Installing new dependencies - [Bower documentation](http://twitter.github.com/bower/)
+### Installing new dependencies - [Bower documentation](http://bower.io)
 
 ```sh
 # Search for a library
