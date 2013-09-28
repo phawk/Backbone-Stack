@@ -2,36 +2,41 @@ define(
 ["chai", "helpers/sandbox"],
 function(chai, Sandbox) {
 
-    var expect = chai.expect;
+    var expect = chai.expect,
+        env;
 
     suite("Sandbox", function() {
 
         setup(function() {
-            this.sandbox = Sandbox;
+            env = {};
+
+            env.sb = sinon.sandbox.create();
+
+            env.sandboxSpy = env.sb.spy();
+
+            env.sandbox = Sandbox;
         });
 
         teardown(function() {
-            this.sandbox = null;
+            env.sb.restore();
         });
 
         test("Sandbox should exist", function() {
-            expect(this.sandbox).to.be.ok;
+            expect(env.sandbox).to.be.ok;
         });
 
         test("should be capable of Pub Sub", function() {
             // Arrange
-            var sandboxSpy = sinon.spy();
-            this.sandbox.on("some-event-name", sandboxSpy);
+            env.sandbox.on("some-event-name", env.sandboxSpy);
 
             // Act
-            this.sandbox.trigger("some-event-name");
+            env.sandbox.trigger("some-event-name");
 
             // Assert
-            expect(sandboxSpy.called).to.be.true;
+            expect(env.sandboxSpy.called).to.be.true;
 
             // Cleanup
-            this.sandbox.off("some-event-name", sandboxSpy);
-            sandboxSpy = null;
+            env.sandbox.off("some-event-name", env.sandboxSpy);
         });
 
     });

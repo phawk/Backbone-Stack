@@ -2,29 +2,32 @@ define(
 ["jquery", "chai", "views/home/main"],
 function($, chai, HomeMainView) {
 
-    var expect = chai.expect;
+    var expect = chai.expect,
+        env;
 
     suite("Home Main View", function() {
 
         setup(function() {
-            this.homemain = new HomeMainView({
+            env = {};
+
+            env.homemain = new HomeMainView({
                 el: $('<div>')
             });
         });
 
         teardown(function() {
-            this.homemain = null;
+            env.homemain.remove();
         });
 
         test("should exist", function() {
-            expect(this.homemain).to.be.ok;
+            expect(env.homemain).to.be.an("object");
         });
 
         test("should render a welcome header", function() {
             // Arrange
-            this.homemain.render();
+            env.homemain.render();
 
-            expect(this.homemain.$('h1').text()).to.equal("Welcome");
+            expect(env.homemain.$('h1').text()).to.equal("Welcome");
         });
 
     });

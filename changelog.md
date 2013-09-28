@@ -1,5 +1,9 @@
 # Recent changes
 
+## 0.3.2 28th Sept 2013
+
+* Bugfix: Grunt watcher for `test` directory
+
 ## 0.3.1 28th Sept 2013
 
 * Update to new `bower` and update components
