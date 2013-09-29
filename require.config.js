@@ -15,9 +15,6 @@ require.config({
         "bootstrap": "../components/bootstrap/dist/js/bootstrap"
     },
     shim: {
-        'handlebars': {
-            exports: 'Handlebars'
-        },
         'bootstrap': {
             deps: ['jquery']
         }

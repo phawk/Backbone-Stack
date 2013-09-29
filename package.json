@@ -8,7 +8,7 @@
   "devDependencies": {
     "grunt": "0.4.1",
     "grunt-contrib-jshint": "0.1.1rc6",
-    "grunt-contrib-handlebars": "0.5.2rc7",
+    "grunt-contrib-handlebars": "0.5.4",
     "grunt-contrib-requirejs": "0.4.0rc7",
     "grunt-contrib-watch": "0.2.0rc7",
     "grunt-mocha": "~0.2.1",

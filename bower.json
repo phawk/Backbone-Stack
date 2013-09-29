@@ -2,11 +2,11 @@
   "name": "application-name",
   "dependencies": {
     "jquery": "~2.0.3",
-    "requirejs": "~2.1.2",
-    "mocha": "~1.8.1",
-    "handlebars": "~1.0.0-rc.1",
-    "chai": "~1.4.2",
-    "almond": "~0.2.4",
+    "requirejs": "~2.1.8",
+    "mocha": "~1.13.0",
+    "handlebars": "phawk/handlebars-amd",
+    "chai": "~1.8.0",
+    "almond": "~0.2.6",
     "backbone-amd": "~1.0.0",
     "underscore-amd": "~1.4.4",
     "bootstrap": "latest"
