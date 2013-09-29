@@ -1,5 +1,9 @@
 # Recent changes
 
+## 0.3.3 29th Sept 2013
+
+* Fix handlebars not loading through AMD
+
 ## 0.3.2 28th Sept 2013
 
 * Tweak sample tests with sinon.sandbox
