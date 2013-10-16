@@ -34,7 +34,6 @@ module.exports = function(grunt) {
         jshint: {
             all: ['Gruntfile.js', 'src/**/!(templates).js', 'test/!(libs)/*.js'],
             options: {
-                es5: true, // Allows EcmaScript5 syntax
                 curly: true, // Always use curlys {}
                 eqeqeq: true, // No more == for you, === only
                 immed: true, // prohibits the use of immediate function invocations without wrapping them in parentheses
