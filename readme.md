@@ -1,4 +1,4 @@
-# Backbone Stack (0.3.3)
+# Backbone Stack (0.3.4)
 
 A pre-configured Backbone Stack for starting new projects, it alleviates a lot of the common boilerplate code and setup. It uses AMD modules, mocha for TDD and handlebars precompiled templates. Grunt plays a major role in the automated linting, testing and building of your code.
 

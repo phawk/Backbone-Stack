@@ -15,6 +15,6 @@
     "grunt-contrib-less": "~0.7.0"
   },
   "dependencies": {
-    "node-version-assets": "0.0.8"
+    "node-version-assets": "~0.2.0"
   }
 }
