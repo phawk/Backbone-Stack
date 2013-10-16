@@ -1,5 +1,9 @@
 # Recent changes
 
+## 0.3.4 16th Oct 2013
+
+* Update a lot of grunt dependencies
+
 ## 0.3.3 29th Sept 2013
 
 * Fix handlebars not loading through AMD
