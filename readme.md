@@ -3,6 +3,7 @@
 A pre-configured Backbone Stack for starting new projects, it alleviates a lot of the common boilerplate code and setup. It uses AMD modules, mocha for TDD and handlebars precompiled templates. Grunt plays a major role in the automated linting, testing and building of your code.
 
 [![Build Status](https://travis-ci.org/phawk/Backbone-Stack.png?branch=master)](https://travis-ci.org/phawk/Backbone-Stack)
+[![Dependency Status](https://gemnasium.com/phawk/Backbone-Stack.png)](https://gemnasium.com/phawk/Backbone-Stack)
 
 [View the changelog](https://github.com/phawk/Backbone-Stack/blob/master/changelog.md)
 
