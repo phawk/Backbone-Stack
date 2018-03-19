@@ -19,7 +19,7 @@ A pre-configured Backbone Stack for starting new projects, it alleviates a lot o
 
 ### Libraries for Test Driven Development
 
-* [Mocha](http://visionmedia.github.com/mocha/) - TDD / BDD testing framework for JavaScript
+* [Mocha](http://mochajs.org/) - TDD / BDD testing framework for JavaScript
 * [Chai.js](http://chaijs.com/) - Nice assertions
 * [Sinon](http://sinonjs.org/) - Spies, Stubs and Mocks
 
